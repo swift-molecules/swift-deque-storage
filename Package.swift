@@ -19,11 +19,11 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-deque.git",
+            url: "https://github.com/swift-atoms/swift-deque.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-atoms/swift-storage.git",
+            url: "https://github.com/swift-atoms/swift-store.git",
             branch: "main"
         ),
         .package(
@@ -48,7 +48,7 @@ let package = Package(
             name: "Deque Storage",
             dependencies: [
                 .product(name: "Deque", package: "swift-deque"),
-                .product(name: "Store Protocol", package: "swift-storage"),
+                .product(name: "Store Protocol", package: "swift-store"),
                 .product(name: "Buffer Protocol", package: "swift-buffer"),
                 .product(name: "Index", package: "swift-index"),
                 .product(

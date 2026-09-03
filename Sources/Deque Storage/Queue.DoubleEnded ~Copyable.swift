@@ -5,7 +5,7 @@ import Ordinal_Standard_Library_Integration
 public import Deque
 public import Store_Protocol
 
-extension __QueueDoubleEnded where S: ~Copyable, S: Store.`Protocol` & Buffer.`Protocol` {
+extension __QueueDoubleEnded where S: ~Copyable, S: Store::Store.`Protocol` & Buffer.`Protocol` {
 
     @inlinable
     public var count: Index.Count { store.count }
@@ -22,7 +22,7 @@ extension __QueueDoubleEnded where S: ~Copyable, S: Store.`Protocol` & Buffer.`P
     }
 }
 
-extension __QueueDoubleEnded where S: ~Copyable, S: Store.`Protocol` & Buffer.`Protocol` {
+extension __QueueDoubleEnded where S: ~Copyable, S: Store::Store.`Protocol` & Buffer.`Protocol` {
 
     @inlinable
     public mutating func pop(from position: Position) -> S.Element? {
@@ -79,7 +79,7 @@ extension __QueueDoubleEnded
 where
     S: ~Copyable,
     S.Element: Copyable,
-    S: Store.`Protocol` & Buffer.`Protocol`
+    S: Store::Store.`Protocol` & Buffer.`Protocol`
 {
 
     @inlinable
@@ -88,7 +88,7 @@ where
     }
 }
 
-extension __QueueDoubleEnded where S: Copyable, S: Store.`Protocol` {
+extension __QueueDoubleEnded where S: Copyable, S: Store::Store.`Protocol` {
 
     @inlinable
     public borrowing func clone() -> Self {
